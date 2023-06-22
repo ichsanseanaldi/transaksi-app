@@ -8,7 +8,13 @@
 
         <h1 class="m-10" style="text-align: center">Form Input</h1>
 
-        @if ($errors->any())
+        @if(session('data'))
+            <div class="m-10 success-msg">
+                <em>{{ session('data') }}</em>
+            </div>
+        @endif
+
+        @if($errors->any())
             <div class="m-10 error-msg">
                 @foreach ($errors->all() as $error)
                     <em>{{ $error }}</em>

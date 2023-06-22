@@ -27,10 +27,9 @@ class SalesDetController extends Controller
                                 'total_bayar',
                                 'quantity',
                                 DB::raw('SUM(quantity) as jumlah_barang'),
-                                DB::raw('SUM(total_bayar) as grand_total')
                             )
-                            ->groupBy('sales.sales_id')
-                            ->get();
+                            ->groupBy(DB::raw('sales.sales_id'),)
+                            ->get();                 
                             
         return view('history',['data'=>$data]);
     }

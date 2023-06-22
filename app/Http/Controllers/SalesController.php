@@ -89,7 +89,7 @@ class SalesController extends Controller
 
         SalesJoint::insert($bulkedData);
 
-        return back()->with('data',$bulkedData);
+        return back()->with('data','Transaksi Berhasil Dibuat!');
     }
 
     /**
