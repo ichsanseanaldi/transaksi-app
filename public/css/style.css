@@ -1,3 +1,13 @@
+:root{
+    --color-white:#FFF;
+    --color-black:#000;
+    --color-black-light:#404040;
+    --color-grey:#CCC;
+    --color-grey-light:#EEE;
+    --color-grey-dark:#AAA;
+    --color-accent:#00c76a;
+}
+
 *{
     margin:0;
     padding:0;
@@ -5,44 +15,51 @@
 }
 
 body{
-    font-size: 16px !important;
-    font-family: sans-serif;
+    font-size: 15px !important;
+    font-family: 'Nunito', sans-serif;
     line-height: 1.5;
-    color: #202020;
+    color: var(--color-black-light);
+}
+
+label{
+    font-weight: 700;
+}
+
+select, option, button, input, a,span{
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 a, button{
     display: block;
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
     text-decoration: none;
     border: none;
     outline: none;
     transition: 0.2s;
     cursor: pointer;
+    font-weight: 700;
 }
 
 input,select,option{
     padding: 10px 15px;
-    border: 2px solid #CCC;
+    border: 2px solid var(--color-grey-dark);
     border-radius: 5px;
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
 }
 
-input[type="date"]{
-    cursor: pointer;
-}
-
-select,option{
+select,option, input[type="date"]{
     cursor: pointer;
 }
 
 a:hover,
 button:hover{
     opacity: 0.5;
+}
+
+.bg-test{
+    background-color: #00AA5B;
+    color: red;
+    border: 2px solid blue;
 }
 
 .m-10{
@@ -53,6 +70,16 @@ button:hover{
     margin: 20px 0;
 }
 
+.group-flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.group-flex input{
+    width: 200px;
+    margin: 5px 0;
+}
+
 .navbar-container{
     position: fixed;
     top: 0;
@@ -61,39 +88,53 @@ button:hover{
     z-index: 999;
     display: flex;
     justify-content: center;
-    background-color: #202020;
+    background-color: var(--color-white);
 }
 
 .navbar-wrapper{
-    width: 1300px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.navbar-button{
-    margin: 15px;
-    border-radius: 5px;
-    text-decoration: underline;
-    color: #FFF;
-}
-
-.container{
-    margin-top:80px;
+    width: 1200px;
     display: flex;
     justify-content: center;
 }
 
+.navbar-button{
+    margin: 15px;
+}
+
+.navbar-button.active{
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.container{
+    min-height: 100vh;
+    margin-top:50px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-grey-light);
+}
+
 .wrapper{
-    width: 1300px;
+    width: 1200px;
+}
+
+.inside{
+    background-color: var(--color-white);
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .toggle-button{
     margin: 10px;
-    padding: 10px;
-    background: #EEE;
-    color: #202020;
-    border-bottom: 1px solid #202020;
-    font-weight: 700;
+    padding: 15px;
+    background: var(--color-grey-light);
+    border-radius: 10px;
+}
+
+.crumb-info{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
 }
 
 .customer-scroll{
@@ -101,14 +142,24 @@ button:hover{
     flex-direction: column;
     margin: 10px;
     height: 300px;
-    background-color: #EEE;
-    border: 1px solid #EEE;
+    background-color: var(--color-grey-light);
     border-radius: 10px;
     overflow-y:scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-grey-dark) transparent;
 }
 
 .customer-scroll.display{
     display: flex;
+}
+
+.icon-svg-1,.icon-svg-2{
+    transition: 0.1s;
+    margin-left: 5px;
+}
+
+.icon-svg-1.display,.icon-svg-2.display{
+    transform: rotate(90deg) translateX(1px);
 }
 
 .customer-list{
@@ -116,10 +167,10 @@ button:hover{
     margin: 10px;
     display:flex;
     flex-direction:column;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
     cursor: pointer;
-    background: #FFF;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    background: var(--color-white);
+    border-bottom: 2px solid var(--color-accent);
     transition: 0.2s;
 }
 
@@ -130,11 +181,13 @@ button:hover{
 .barang-scroll{
     display: none;
     height: 100%;
-    background-color: #EEE;
-    border: 1px solid #EEE;
+    background-color: var(--color-grey-light);
+    border: 1px solid var(--color-grey-light);
     border-radius: 10px;
     overflow-x: scroll;
     margin: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-grey-dark) transparent;
 }
 
 .barang-scroll.display{
@@ -143,14 +196,13 @@ button:hover{
 
 .barang-list{
     text-transform: capitalize;
-    min-width: 330px;
+    min-width: 280px;
     padding: 10px 15px;
     margin: 10px;
     display:flex;
     flex-direction:column;
     border-radius: 5px;
-    background: #FFF;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    background: var(--color-white);
     transition: 0.2s;
 }
 
@@ -158,14 +210,24 @@ button:hover{
     margin: 5px;
 }
 
+.input-group.input{
+    display: flex;
+}
+
+.input-group.input label,
+.input-group.input select,
+.input-group.input input{
+    margin-right:5px ;
+    padding:10px;
+    width: 100px;
+}
+
 .add-button{
     margin: 10px;
     padding: 10px;
-    background-color: rgb(247, 198, 0);
-    color: rgb(0, 0, 0);
-    border: 1px solid #000;
+    background-color: var(--color-accent);
+    color: var(--color-white);
     border-radius: 5px;
-    font-weight: 700;
 }
 
 .result-wrapper{
@@ -177,39 +239,51 @@ button:hover{
 }
 
 .responsive-table li {
-    border-radius: 3px;
     padding: 10px 15px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
-    text-align: center !important;
+    text-align: start !important;
     min-width: 1000px;
 }
 
 .table-header {
-    background-color: darkturquoise;
+    border-radius: 5px 5px 0 0;
+    background-color: var(--color-white);
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 700;
-    color: #202020;
+    color: var(--color-black-light);
+    border-bottom:2px solid var(--color-grey-light);
+    margin-bottom: 10px;
 }
+
 .table-row {
-    background-color: #ffffff;
-    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+    background-color: var(--color-white);
+    border-radius: 0 0 5px 5px;
 }
+
 .col-1 {
-    flex-basis: 10%;
+    width: 100px !important;
+    padding: 0 5px;
 }
 .col-2 {
-    flex-basis: 40%;
+    width: 300px !important;
+    padding: 0 5px;
 }
 .col-3 {
-    flex-basis: 25%;
+    width: 130px !important;
+    padding: 0 5px;
 }
 .col-4 {
-    flex-basis: 15%;
+    width: 150px !important;
+    padding: 0 5px;
 }
-    
+
+.flex-center{
+    display: grid;
+    place-items: center;
+}
+
 .quantity{
     display: flex;
 }
@@ -217,12 +291,19 @@ button:hover{
 .button-quantity{
     padding: 10px;
     border-radius: 5px;
-    margin: 0 5px;
+}
+
+.cta{
+    font-size: 16px;
+    color: var(--color-accent);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-accent);
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .small-input{
     width: 40px;
-    text-align: center;
 }
 
 .p-5{
@@ -231,12 +312,12 @@ button:hover{
 
 .medium-input{
     width: 80px;
-    text-align: center;
     padding: 5px 0 !important;
 }
 
 .diskon-persen-input{
-    text-align: center;
+    text-align: start;
+    width: 80%;
 }
 
 .noborder{
@@ -244,45 +325,78 @@ button:hover{
     outline:none;
     user-select: none !important;
     pointer-events: none !important;
-    padding: 10px;
+}
+
+.center{
+    text-align: center !important;
 }
 
 .overflowed{
     min-height: 300px;
     overflow-x: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-grey-dark) transparent;
+}
+
+.wrapper-last-item{
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper-last-item input,
+.wrapper-last-item label{
+    padding: 10px 0 !important;
+}
+
+.wrapper-last-item input,
+.wrapper-last-item select{
+    width: 200px;
 }
 
 .wrapper-last{
     padding: 10px;
     margin: 10px;
-    background-color: #EEE;
+    background-color: var(--color-white);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:flex-end;
     gap: 10px;
+    border-top: 2px solid var(--color-grey-light);
+}
+
+.grand-wrapper{
+    background-color: var(--color-white);
+    color: var(--color-black-light);
+    width: fit-content;
+    padding: 0 5px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--color-accent);
 }
 
 .error-msg{
     display: flex;
     flex-direction: column;
     color: crimson;
+    font-weight: 700;
     gap: 10px;
 }
 
 .simpan-button{
     padding: 10px;
-    background: rgb(13, 255, 98);
-    color:rgb(6, 67, 28) ;
+    background: var(--color-accent);
+    color:var(--color-white);
     border: none;
     cursor: pointer;
     transition: 0.2s;
+    width: 100% !important;
 }
 
 .simpan-button:hover{
     opacity: 0.5;
 }
-    
+
 @media (max-width: 1300px) {
     .navbar-wrapper{
         width: 1000px;

@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function(){
-    return redirect('/transaksi');
+    return view('home');
 });
 
-Route::resource('/transaksi', SalesController::class);
+Route::resource('/form', SalesController::class);
 
 Route::resource('/history', SalesDetController::class);

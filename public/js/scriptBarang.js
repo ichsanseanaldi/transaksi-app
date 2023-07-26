@@ -124,7 +124,7 @@ function render(i,e){
         barangChoice.innerHTML +=`  <input type="text" name="barang_id[${i}]" id="barang_id_${i}" value=${id} readonly data-harga=${hargaBarang} hidden>
                                     <li class="table-row input-render-${i}">
                                         <div class="col col-3 p-5">${namaBarang}</div>
-                                        <div class="col col-3 p-5">${kodeBarang}</div>
+                                        <div class="col col-1 p-5">${kodeBarang}</div>
                                         <div class="col col-3 p-5">${hargaBarang}</div>
                                         <div class="col col-3 quantity">
                                             <button data-method="minus" onclick="qtyHandler(event,${i})" class="button-quantity">-</button>
@@ -148,7 +148,7 @@ function render(i,e){
                                         <div class="col col-3">
                                             <input type="text" name="harga_setelah_diskon[${i}]" id="harga_setelah_diskon_${i}" value=${hargaSetelahDiskon} class="noborder medium-input" data-harga=${hargaSetelahDiskon} readonly>
                                         </div>
-                                        <div class="col col-2">
+                                        <div class="col col-3">
                                             <input type="text" name="total_harga_barang[${i}]" id="total_harga_barang_${i}" value=${totalHargaBarang} class="total_harga_barang noborder medium-input"  readonly>
                                         </div>
                                         <div class="col col-1">

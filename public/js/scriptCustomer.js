@@ -2,6 +2,8 @@
 const customerList = document.querySelectorAll('.customer-list');
 const customerChoice = document.querySelector('.customer-choice');
 const userDisplay = document.querySelector('.user-display');
+const customerScroll = document.querySelector('.customer-scroll');
+const svg1 = document.querySelector('.icon-svg-1');
 
 for(let i = 0; i< customerList.length ; i++){
 
@@ -15,11 +17,26 @@ for(let i = 0; i< customerList.length ; i++){
         customerChoice.innerHTML = `<input type="text" name="cust_id" id="cust_id" value=${id} hidden >`
 
         userDisplay.innerHTML = `<div>
-                                    <strong>Customer:</strong>
-                                    <p>Nama : ${namaCust}</p>   
-                                    <p>Kode : ${kodeCust}</p>    
-                                    <p>Telp : ${telpCust}</p> 
+                                    <strong>Customer</strong>
+                                    <div style="margin-left:10px;">
+                                        <div class="crumb-info">
+                                            <span>Nama</span>  
+                                            <span>${namaCust}</span>  
+                                        </div>
+                                        <div class="crumb-info">
+                                            <span>Kode</span>    
+                                            <span>${kodeCust}</span>    
+                                        </div>
+                                        <div class="crumb-info">
+                                            <span>Telp</span>  
+                                            <span>${telpCust}</span>  
+                                        </div>
+                                    </div>
                                  </div>`
+
+        customerScroll.classList.remove('display');
+        svg1.classList.remove('display');
+        
 
     });
 
