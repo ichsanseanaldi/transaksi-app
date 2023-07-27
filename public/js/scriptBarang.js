@@ -152,7 +152,7 @@ function render(i,e){
                                             <input type="text" name="total_harga_barang[${i}]" id="total_harga_barang_${i}" value=${totalHargaBarang} class="total_harga_barang noborder medium-input"  readonly>
                                         </div>
                                         <div class="col col-1">
-                                            <button class="button-quantity" onclick="hapusHandler(event, ${i})">Hapus</button>
+                                            <button class="button-quantity" style="background-color:crimson;color:#FFF;" onclick="hapusHandler(event, ${i})">Hapus</button>
                                         </div>
                                     </li> `;
         barangId.push(id);

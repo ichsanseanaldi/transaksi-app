@@ -55,7 +55,7 @@
             </div>
             <div style="display:flex;justify-content:flex-end;margin-top:20px">
                 <h2 class="grand-wrapper">
-                    Grand Total : Rp.
+                    Grand Total : <br class="space"/> Rp.
                     <span class="number-format grand-total">
                     </span> 
                 </h2>

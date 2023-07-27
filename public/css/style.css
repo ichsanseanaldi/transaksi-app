@@ -31,6 +31,11 @@ select, option, button, input, a,span{
     font-size: inherit;
 }
 
+input:focus,select:focus{
+    outline: none;
+    border: 2px solid var(--color-accent);
+}
+
 a, button{
     display: block;
     text-decoration: none;
@@ -51,7 +56,7 @@ select,option, input[type="date"]{
     cursor: pointer;
 }
 
-a:hover,
+a:hover:not(.active),
 button:hover{
     opacity: 0.5;
 }
@@ -64,6 +69,10 @@ button:hover{
 
 .m-10{
     margin: 10px;
+}
+
+.m-10-ud{
+    margin: 10px 0;
 }
 
 .m-20-ud{
@@ -172,6 +181,7 @@ button:hover{
     background: var(--color-white);
     border-bottom: 2px solid var(--color-accent);
     transition: 0.2s;
+    min-width: 300px
 }
 
 .customer-list:hover{
@@ -253,7 +263,7 @@ button:hover{
     text-transform: uppercase;
     font-weight: 700;
     color: var(--color-black-light);
-    border-bottom:2px solid var(--color-grey-light);
+    border-bottom:2px solid var(--color-accent);
     margin-bottom: 10px;
 }
 
@@ -363,7 +373,7 @@ button:hover{
     justify-content: center;
     align-items:flex-end;
     gap: 10px;
-    border-top: 2px solid var(--color-grey-light);
+    border-top: 2px solid var(--color-accent);
 }
 
 .grand-wrapper{
@@ -372,7 +382,6 @@ button:hover{
     width: fit-content;
     padding: 0 5px;
     margin-bottom: 15px;
-    border-bottom: 2px solid var(--color-accent);
 }
 
 .error-msg{
@@ -388,6 +397,7 @@ button:hover{
     background: var(--color-accent);
     color:var(--color-white);
     border: none;
+    border-radius: 5px;
     cursor: pointer;
     transition: 0.2s;
     width: 100% !important;
@@ -395,6 +405,10 @@ button:hover{
 
 .simpan-button:hover{
     opacity: 0.5;
+}
+
+.space{
+    display: none;
 }
 
 @media (max-width: 1300px) {
@@ -433,6 +447,7 @@ button:hover{
     .wrapper-last-item{
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
 }
 
@@ -445,4 +460,8 @@ button:hover{
     .wrapper{
         width: 300px;
     }   
+
+    .space{
+        display: block;
+    }
 }

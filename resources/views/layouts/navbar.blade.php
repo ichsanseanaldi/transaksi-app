@@ -4,8 +4,8 @@
         <div class="navbar-wrapper">
             <div> </div>
             <a href="/" class="navbar-button {{ request()->is('/') ? 'active' : ''}}">Home</a>
-            <a href="/form" class="navbar-button {{ request()->is('form') ? 'active' : ''}}">Order</a>
-            <a href="/history" class="navbar-button {{ request()->is('history') ? 'active' : ''}}">Transaksi</a>
+            <a href="/order" class="navbar-button {{ request()->is('order') ? 'active' : ''}}">Order</a>
+            <a href="/transaksi" class="navbar-button {{ request()->is('transaksi') ? 'active' : ''}}">Transaksi</a>
         </div>
     </div>
 

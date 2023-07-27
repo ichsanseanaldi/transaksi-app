@@ -16,8 +16,8 @@ for(let i = 0; i< customerList.length ; i++){
 
         customerChoice.innerHTML = `<input type="text" name="cust_id" id="cust_id" value=${id} hidden >`
 
-        userDisplay.innerHTML = `<div>
-                                    <strong>Customer</strong>
+        userDisplay.innerHTML = `<div style="margin-left:10px;border-left:2px solid #00c76a;padding:10px;">
+                                    <strong>Customer :</strong>
                                     <div style="margin-left:10px;">
                                         <div class="crumb-info">
                                             <span>Nama</span>  

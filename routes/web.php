@@ -19,6 +19,6 @@ Route::get('/', function(){
     return view('home');
 });
 
-Route::resource('/form', SalesController::class);
+Route::resource('/order', SalesController::class);
 
-Route::resource('/history', SalesDetController::class);
+Route::resource('/transaksi', SalesDetController::class);

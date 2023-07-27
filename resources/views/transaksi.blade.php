@@ -7,9 +7,9 @@
     <h1 class="m-20-ud">
         <?xml version="1.0" encoding="utf-8"?>
         <svg width="30px" height="30px" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7.2998 5H22L20 12H8.37675M21 16H9L7 3H4M4 8H2M5 11H2M6 14H2M10 20C10 20.5523 9.55228 21 9 21C8.44772 21 8 20.5523 8 20C8 19.4477 8.44772 19 9 19C9.55228 19 10 19.4477 10 20ZM21 20C21 20.5523 20.5523 21 20 21C19.4477 21 19 20.5523 19 20C19 19.4477 19.4477 19 20 19C20.5523 19 21 19.4477 21 20Z" stroke="#505050" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7.2998 5H22L20 12H8.37675M21 16H9L7 3H4M4 8H2M5 11H2M6 14H2M10 20C10 20.5523 9.55228 21 9 21C8.44772 21 8 20.5523 8 20C8 19.4477 8.44772 19 9 19C9.55228 19 10 19.4477 10 20ZM21 20C21 20.5523 20.5523 21 20 21C19.4477 21 19 20.5523 19 20C19 19.4477 19.4477 19 20 19C20.5523 19 21 19.4477 21 20Z" stroke="#404040" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        Order Form
+        Order Cart
     </h1>
 
     <div class="inside">
@@ -135,11 +135,11 @@
                 @csrf
                 <div class="customer-choice"></div>
                 <div class="m-10 group-flex ">
-                    <label for="nomor_transaksi">Nomor Transaksi</label>
+                    <label for="nomor_transaksi">Nomor Transaksi :</label>
                     <input class="noborder" type="text" name="nomor_transaksi" id="nomor_transaksi" value={{ $date }}>
                 </div>
                 <div class="m-10 group-flex">
-                    <label for="tanggal_transaksi">Tanggal Transaksi</label>
+                    <label for="tanggal_transaksi">Tanggal Transaksi :</label>
                     <input type="date" name="tanggal_transaksi" id="tanggal_transaksi">
                 </div>
                 <h2 class="m-20-ud center ">Daftar Barang</h2>
@@ -189,7 +189,7 @@
                         <input type="text" name="total_bayar" id="total_bayar" class="noborder" readonly required>
                     </div>
                     <div class="wrapper-last-item">
-                        <input type="submit" value="Simpan" class="simpan-button">
+                        <button type="submit" class="simpan-button">Simpan</button>
                     </div>
                 </div>
             </form>
