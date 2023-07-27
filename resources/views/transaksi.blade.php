@@ -131,7 +131,7 @@
             </div>
         </div>
         <div class="result-wrapper">
-            <form action="/transaksi" method="POST" class="form wrapper-test">
+            <form action="/order" method="POST" class="form wrapper-test">
                 @csrf
                 <div class="customer-choice"></div>
                 <div class="m-10 group-flex ">
