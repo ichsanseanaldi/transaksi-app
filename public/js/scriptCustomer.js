@@ -36,7 +36,6 @@ for(let i = 0; i< customerList.length ; i++){
 
         customerScroll.classList.remove('display');
         svg1.classList.remove('display');
-        
 
     });
 

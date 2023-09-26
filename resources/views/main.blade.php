@@ -18,6 +18,7 @@
                 @yield('child')
             </div>
         </div>
+        
     </body>
 
     <script src="/js/scriptDisplay.js"></script>
